@@ -102,7 +102,7 @@ class DbHandler {
         // query to return all children in a family
         // Including the partition key value of lastName in the WHERE filter results in a more efficient query
         const querySpec = {
-        query: 'SELECT * FROM root r WHERE r.Hours - @Hours <=1',
+        query: 'SELECT * FROM root r WHERE @Hours - r.Hours <=1',
         parameters: [
             {
             name: '@Hours',
