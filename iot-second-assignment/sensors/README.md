@@ -14,7 +14,12 @@ single RIOT native instance, we can do the following:
 sudo ip a a fec0:affe::1/64 dev tapbr0
 ```
 
-3. Assign a site-global address with the same prefix to the RIOT `native`
+3. In the makefile, you have to change RIOTBASE into your directory containing RIOT, and then run the program:
+```
+make all term
+```
+
+4. Assign a site-global address with the same prefix to the RIOT `native`
    instance:
 ```
 ifconfig 5 add fec0:affe::99
