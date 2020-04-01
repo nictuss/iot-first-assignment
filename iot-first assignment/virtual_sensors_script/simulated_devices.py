@@ -4,7 +4,7 @@ import threading
 from azure.iot.device import IoTHubDeviceClient, Message
 
 # Define the JSON message to send to IoT Hub.
-MSG_TXT = '{{"temperature": {temperature},"humidity": {humidity},"wind_direction": {direction},"wind_intensity": {intensity},"rain_height": {height}}}'
+MSG_TXT = '{{"temperature": {temperature},"humidity": {humidity},"wind_direction": {direction},"wind_intensity": {intensity},"rain_height": {height}, "device_id": {id}}'
 
 def iothub_client_init(device_name, connection_string):
     # Create an IoT Hub client
@@ -23,7 +23,7 @@ def iothub_client_telemetry_sample_run(device_name, connection_string):
         wind_direction = random.randint(0, 360)
         wind_intensity = random.randint(0, 100)
         rain_height = random.randint(0, 50)
-        msg_txt_formatted = MSG_TXT.format(temperature=temperature, humidity= humidity, direction = wind_direction, intensity = wind_intensity, height = rain_height)
+        msg_txt_formatted = MSG_TXT.format(temperature=temperature, humidity= humidity, direction = wind_direction, intensity = wind_intensity, height = rain_height, id=device_name)
         message = Message(msg_txt_formatted)
 
         # Send the message.
