@@ -43,8 +43,8 @@ print ("Boot of 2 simulated meteo stations")
 #define the connection strings for the two simulated devices
 #in order to connect to the iot hub
 connection_strings = [
-    'HostName=iot-first-assignment.azure-devices.net;DeviceId=meteo_station_1;SharedAccessKey=sfikBz49v0DaQLMmHbG+wMVsXyP+ROW2Dg9O4GqHhJc=',
-    'HostName=iot-first-assignment.azure-devices.net;DeviceId=meteo_station_2;SharedAccessKey=7gw05XQOUje4m9cLR6yYB4OuIDJ0OA1EY9tltK0tzGQ='
+    #meteo_station_1 connection string,
+    #meteo_station_2 connection string
     ]
 
     
