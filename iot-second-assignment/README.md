@@ -7,8 +7,8 @@ do not need anymore to be simulated by a python script
 
 Here there is the link to a guide that can help building a system like this:
 
-LINK ARTICOLO LINKEDIN
+https://www.linkedin.com/pulse/how-retrieve-telemetry-data-send-web-app-through-mqtt-nicoló-palmiero/?published=t
 
 and here there is a short video demonstration of the functioning of the system:
 
-LINK VIDEO YOUTUBE
+https://youtu.be/K2o-JvymCBA
