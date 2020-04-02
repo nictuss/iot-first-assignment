@@ -107,6 +107,10 @@ class DbHandler {
             {
             name: '@Hours',
             value: (new Date).getUTCHours()
+            },
+            {
+            name: '@Minutes',
+            value: (new Date).getUTCMinutes()
             }
         ]
         }

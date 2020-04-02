@@ -5,8 +5,8 @@ const path = require('path');
 const EventHubReader = require('./scripts/event-hub-reader.js');
 const DbHandler = require('./persistence-handler');
 
-const iotHubConnectionString = "HostName=iot-first-assignment.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=4MiaKaAZCOs99vxaZKNjr3Kc9KqewnD/kAlfVPtm3q4="
-const eventHubConsumerGroup = 'iotConsumerGroup'
+const iotHubConnectionString = "your iot hub connection string"
+const eventHubConsumerGroup = "your consumer group"
 
 
 console.log(iotHubConnectionString)
@@ -31,8 +31,6 @@ db.createDatabase()
   })
   .catch((error) => { exit(`Completed with error ${JSON.stringify(error) }`) });
 
-//refresh the last hour table every 7 seconds
-setInterval(queryDb, 7000);
 
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
@@ -69,7 +67,7 @@ const eventHubReader = new EventHubReader(iotHubConnectionString, eventHubConsum
 
 
 (async () => {
-  await eventHubReader.startReadMessage((message, date, deviceId) => {
+  await eventHubReader.startReadMessage((message, date) => {
     try {
       var date = new Date();
       var hours = date.getUTCHours();
@@ -84,11 +82,12 @@ const eventHubReader = new EventHubReader(iotHubConnectionString, eventHubConsum
         MessageDate: date || Date.now().toISOString(),
         Hours: hours,
         Minutes: min,
-        DeviceId: deviceId,
+        DeviceId: message.device_id,
       };
 
       db.createItem(payload);
       wss.broadcast(JSON.stringify(payload));
+      setTimeout(queryDb, 500);
 
     } catch (err) {
       console.error('Error broadcasting: [%s] from [%s].', err, message);
