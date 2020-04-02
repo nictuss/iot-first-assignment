@@ -29,6 +29,8 @@
 #include "msg.h"
 #include "net/emcute.h"
 #include "net/ipv6/addr.h"
+#include "lpsxxx.h"
+#include "lpsxxx_params.h"
 
 #ifndef EMCUTE_ID
 #define EMCUTE_ID           ("meteo_station_1")
@@ -130,19 +132,52 @@ static int cmd_discon(int argc, char **argv)
     return 0;
 }
 
+static int16_t get_temp(void)
+{
+
+    lpsxxx_t dev;
+    printf("Test application for %s pressure sensor\n\n", LPSXXX_SAUL_NAME);
+    printf("Initializing %s sensor\n", LPSXXX_SAUL_NAME);
+    if (lpsxxx_init(&dev, &lpsxxx_params[0]) != LPSXXX_OK) {
+        puts("Initialization failed");
+        return 1;
+    }
+
+    uint16_t pres;
+    int16_t temp;
+    while (1) {
+        lpsxxx_enable(&dev);
+        xtimer_sleep(1); 
+
+        lpsxxx_read_temp(&dev, &temp);
+        lpsxxx_read_pres(&dev, &pres);
+        lpsxxx_disable(&dev);
+
+        int temp_abs = temp / 100;
+        temp -= temp_abs * 100;
+
+        printf("Pressure value: %ihPa - Temperature: %2i.%02i°C\n",
+               pres, temp_abs, temp);
+    }
+    
+    return temp;
+}
+
 void generate_message(char *message)
 {
-    //generate random data
-    srand(time(NULL));
-    int temperature = rand() % 50 + 1;
-    int humidity = rand() % 100 + 1;
-    int direction = rand() % 360 + 1;
-    int intensity = rand() % 100 + 1;
-    int height = rand() % 50 + 1;
+        //generate random data
+        srand(time(NULL));
+        int16_t temperature = get_temp();
+        int humidity = rand() % 100 + 1;
+        int direction = rand() % 360 + 1;
+        int intensity = rand() % 100 + 1;
+        int height = rand() % 50 + 1;
 
-    //create the JSON message
-    sprintf(message,"{\"temperature\": \"%d\", \"humidity\": \"%d\", \"wind_direction\": \"%d\", \"wind_intensity\": \"%d\", \"rain_height\": \"%d\", \"device_id\": \"%s\"}",
-    temperature, humidity, direction, intensity, height, EMCUTE_ID);
+        //create the JSON message
+        sprintf(message,"{\"temperature\": \"%d\", \"humidity\": \"%d\", \"wind_direction\": \"%d\", \"wind_intensity\": \"%d\", \"rain_height\": \"%d\", \"device_id\": \"%s\"}",
+        temperature, humidity, direction, intensity, height, EMCUTE_ID);
+        printf("Temperature retrieved: %d celsius degrees, from device: %s", temperature, EMCUTE_ID);
+
 }
 
 static int cmd_pub(int argc, char **argv)

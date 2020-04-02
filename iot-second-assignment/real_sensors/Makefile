@@ -1,9 +1,6 @@
 # name of your application
 APPLICATION = emcute_mqttsn
 
-# If no BOARD is found in the environment, use this default:
-BOARD ?= native
-
 # This has to be the absolute path to the RIOT base directory:
 RIOTBASE ?= $(CURDIR)/../../RIOT/
 EMCUTE_ID ?= meteo_station_2
@@ -33,6 +30,10 @@ USEMODULE += ps
 USEMODULE += gnrc_icmpv6_echo
 #add timers module
 USEMODULE += xtimer
+#add drivers module
+BOARD ?= iotlab-m3
+DRIVER ?= lps331ap
+USEMODULE += $(DRIVER)
 
 
 # Allow for env-var-based override of the nodes name (EMCUTE_ID)
