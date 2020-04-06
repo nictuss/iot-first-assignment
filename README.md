@@ -9,5 +9,7 @@ will find a link to an hands on guide, and to a short youtube video that illustr
 
 **iot-second-assignment**: retrieve telemetry data from sensors and send it to a web app through MQTT with RIOT os (RIOT_os)
 
+**common part**: a simple web app that allows to visualize telemetry data, and stores it in a noSQL database (web_app)
+
 Here there is the link to my linkedin profile:
 https://www.linkedin.com/in/nicoló-palmiero-a9a5101a3/
