@@ -7,7 +7,9 @@ will find a link to an hands on guide, and to a short youtube video that illustr
 
 **iot-first-assignment**: visualize telemetry data from simulated IoT devices using the MQTT protocol on Azure (in *simulated_devices* folder)
 
-**iot-second-assignment**: retrieve telemetry data from sensors and send it to a web app through MQTT with RIOT os (in *RIOT_os* folder)
+**iot-second-assignment**: retrieve telemetry data from sensors and send it to a web app through MQTT with RIOT os (in *MQTT-SN/MQTT* folder)
+
+**iot-third-assignment**: send telemetry data through LoRa using St-Lrwan1 devices and the things network (in *Lora* folder)
 
 **common part**: a simple web app that allows to visualize telemetry data, and stores it in a noSQL database (in *web_app* folder)
 
