@@ -5,5 +5,5 @@ This is the folder for the third assignment of the iot class. The goal of this a
 Here you can find a guide that will help you developing a sysem like this:
 https://www.linkedin.com/pulse/hands-on-tutorial-3-how-retrieve-telemetry-data-from-sensors-nicoló/?published=t
 
-Here you can finda a video that shows the functioning of this system using Azure IoT Hub:
+Here you can find a video that shows the functioning of this system using Azure IoT Hub:
 https://youtu.be/qMlvtD95DGE
