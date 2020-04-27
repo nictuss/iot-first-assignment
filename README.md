@@ -5,7 +5,7 @@ make pubicly available my work. These kind of assignments aim to build an IoT sy
 use it, is to start from the first assignment to the last, because they are very strictly related. In every assignment folder you
 will find a link to an hands on guide, and to a short youtube video that illustrates the functioning of the system built so far.
 
-**iot-first-assignment**: visualize telemetry data from simulated IoT devices using the MQTT protocol on Azure (in *simulated_devices* folder)
+[iot-first-assignment](https://github.com/nictuss/iot-assignments/tree/master/simulated_devices): visualize telemetry data from simulated IoT devices using the MQTT protocol on Azure
 
 **iot-second-assignment**: retrieve telemetry data from sensors and send it to a web app through MQTT with RIOT os (in *MQTT-SN/MQTT* folder)
 
