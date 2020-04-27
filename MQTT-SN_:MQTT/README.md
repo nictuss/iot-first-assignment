@@ -1,5 +1,7 @@
 # How to send telemetry data from sensors using RIOT os
 
+[](Images/mqtt.jpeg)
+
 This folder contains code that could be used to build a system that retrieves telemetry data from sensors and sends it though an architecture like: RIOT device -> MQTT-SN/MQTT bridge -> 
 MQTT broker -> Azure IoT Hub -> Web App. This aims to extend the work done in the first 
 guide with the possibility to develop some code that can actually run on real devices, that 
