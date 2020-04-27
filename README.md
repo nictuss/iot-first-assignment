@@ -5,7 +5,7 @@ This repository has been created as part of my master's degree @Sapienza Univers
 
 [iot-first-assignment](https://github.com/nictuss/iot-assignments/tree/master/simulated_devices): visualize telemetry data from simulated IoT devices using the MQTT protocol on Azure
 
-[iot-second-assignment](https://github.com/nictuss/iot-assignments/tree/master/MQTT-SN:MQTT): retrieve telemetry data from sensors and send it to a web app through MQTT with RIOT os
+[iot-second-assignment](https://github.com/nictuss/iot-assignments/tree/master/MQTTSN-MQTT): retrieve telemetry data from sensors and send it to a web app through MQTT with RIOT os
 
 [iot-third-assignment](https://github.com/nictuss/iot-assignments/tree/master/LoRa): send telemetry data through LoRa using St-Lrwan1 devices and the things network
 
