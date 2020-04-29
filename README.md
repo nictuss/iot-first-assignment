@@ -13,5 +13,4 @@ This repository has been created as part of my master's degree @Sapienza Univers
 
 If you want to see all the three assignments' systems up and running I suggest you to watch my playlist on Youtube: [Youtube playlist](https://www.youtube.com/playlist?list=PLBFMhfn1hFBtwEk9WfoHxlpllm-htPJ5d)
 
-Here there is the link to my linkedin profile:
-https://www.linkedin.com/in/nicoló-palmiero-a9a5101a3/
+Here there is the link to my LinkedIn profile: [LinkedIn profile](https://www.linkedin.com/in/nicoló-palmiero-a9a5101a3/)
