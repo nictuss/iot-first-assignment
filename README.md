@@ -11,5 +11,6 @@ This repository has been created as part of my master's degree @Sapienza Univers
 
 [web application](https://github.com/nictuss/iot-assignments/tree/master/web_app): a simple web app that allows to visualize telemetry data, and stores it in a noSQL database
 
-Here there is the link to my linkedin profile:
-https://www.linkedin.com/in/nicoló-palmiero-a9a5101a3/
+If you want to see all the three assignments' systems up and running I suggest you to watch my playlist on Youtube: [Youtube playlist](https://www.youtube.com/playlist?list=PLBFMhfn1hFBtwEk9WfoHxlpllm-htPJ5d)
+
+Here there is the link to my LinkedIn profile: [LinkedIn profile](https://www.linkedin.com/in/nicoló-palmiero-a9a5101a3/)
