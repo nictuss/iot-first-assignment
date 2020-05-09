@@ -34,6 +34,7 @@ $(document).ready(() => {
       const tr2 = document.createElement("tr");
       lastValues.forEach((cell) => {
         const td2 = document.createElement("td");
+        td2.className = "tile";
         td2.textContent = cell;
         tr2.appendChild(td2);
       });
@@ -72,6 +73,7 @@ $(document).ready(() => {
 
           tableRow.forEach((cell) => {
             const td = document.createElement("td");
+            td.className = "tile";
             td.textContent = cell;
             tr.appendChild(td);
           });
@@ -128,6 +130,7 @@ $(document).ready(() => {
       }
     }
     else{
+      console.log(messageData);
       device.populateTelemetry(messageData);
     }
   };
