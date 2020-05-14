@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Public Dashboard | Accelerometer Measurements</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nicolò Palmiero">
+  <meta charset="UTF-8">
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+<body>
+  <div class="my_img">
+    <h1 class= "title">Cloud Computing measurements</h1>
+    <h2 class="nodata" id="walkingCloud">No realtime data</h2>
+    <table>
+      <tr>
+        <td class="boxes">
+          <h1 class = "subtitle">Real time data</h1>
+          <div class="subboxes" id="clsb">
+            <span></span>
+          </div>
+        </td>
+        <td class="boxes">
+          <h1 class = "subtitle">Last hour data</h1>
+          <div class="subboxes" id="dblsb">
+          </div>
+        </td>
+      </tr>
+    </table>
+    <h1 class= "title">Edge Computing measurements</h1>
+    <h2 class="nodata" id="walkingEdge">No realtime data</h2>
+    <div class="boxes2">
+      <h1 class = "subtitle">Last hour data</h1>
+      <div class="subboxes" id="edgedb">
+      </div>
+    </div>
+
+    <script src="js/dataDisplayer.js" type="text/javascript" charset="utf-8"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+body{
+    background-image: url(images/clouds.png);
+}
+
+table {
+    width: 100%
+}
+
+.title{
+    text-align: center;
+    font-size: 40px;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 30px;
+}
+
+.walk{
+    text-align: center;
+    font-size: 30px;
+    color: forestgreen;
+}
+
+.stop{
+    text-align: center;
+    font-size: 30px;
+    color: orangered;
+}
+
+.nodata{
+    text-align: center;
+    font-size: 30px;
+    color: darkgrey;
+}
+
+.boxes{
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    width: 50%;
+}
+
+.boxes2{
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+}
+
+.messagebox{
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    width: 100%;
+    margin-bottom: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.subboxes{
+    width: 100%;
+    overflow: scroll;
+    color: #000000;
+    font: Normal 12px Verdana;
+    height: 400px;
+    margin: 0px;
+    scrollbar-base-color: #000000;
+    scrollbar-arrow-color: rgb(228, 228, 228);
+    scrollbar-track-color: rgb(255, 255, 255);
+}
+
+p{
+    text-align: center;
+}
