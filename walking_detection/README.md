@@ -15,10 +15,10 @@ The cloud based architecture is contained in the [cloud_computing](cloud_computi
 ![](images/Edge_architecture_diagram.png)
 
 The activity recognition model is executed directly by the smartphone. Given the data collected by the smartphone, it provides a status for the state of the user.
-The edge based architecture is contained in the ![edge_computing](edge_computing) folder.
+The edge based architecture is contained in the [edge_computing](edge_computing) folder.
 
 ## Public Dashboard
-It is a public dasboard that can display the result of the activity recognition model for both the cloud and edge based architectures. It is contained in the ![public_dashboard](dashboard_and_sql_handler/public_dashboard) folder.
+It is a public dasboard that can display the result of the activity recognition model for both the cloud and edge based architectures. It is contained in the [public_dashboard](dashboard_and_sql_handler/public_dashboard) folder.
 
 ## DB Handler
-It is a python script I have used to create and delete tables from the DB. It is contained in the ![sql handler](dashboard_and_sql_handler/sql_handler) folder.
+It is a python script I have used to create and delete tables from the DB. It is contained in the [sql_handler](dashboard_and_sql_handler/sql_handler) folder.
