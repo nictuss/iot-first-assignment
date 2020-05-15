@@ -37,6 +37,15 @@ function processData(buffer)
   return in_movement;
 }
 
+//function to display the current status of the user
+function updateStatus(walking, msg){
+  if(msg == true){
+    walking.textContent = 'WALKING';
+  }
+  else{
+    walking.textContent = 'STANDING STILL'
+  }
+}
 
 let status = document.getElementById('status');
 if ( 'Accelerometer' in window ) {
@@ -53,6 +62,7 @@ if ( 'Accelerometer' in window ) {
     if(counter == 10){
       let message = {};
       let walking = processData(buffer);
+      updateStatus(document.getElementById('stat'), walking);
       message['walking'] = walking;
       message['timestamp'] = dateTime;
       socket.emit('accelerometer', message);
