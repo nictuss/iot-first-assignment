@@ -6,7 +6,7 @@ This is the foìlder for the 4th assignment for my IoT class at Sapienza univers
 It is an HTML5 application using the Generic Sensor API that collects data form the accelerator sensor of the smartphone. The values collected are sent to azure IoT Hub.
 
 ## Cloud based deployment
-![](images/Cloud_infrastructure_diagram.png)
+![](images/Cloud_infratructure_diagram.png)
 
 Given the data arriving to the cloud, it executes a model and provides a status for the state of the user either every 10 seconds.
 The cloud based architecture is contained in the [cloud_computing](cloud_computing) folder.
