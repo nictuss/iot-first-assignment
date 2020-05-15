@@ -24,6 +24,6 @@ It is a public dasboard that can display the result of the activity recognition 
 It is a python script I have used to create and delete tables from the DB. It is contained in the [sql_handler](dashboard_and_sql_handler/sql_handler) folder.
 
 ## Links
-If you want to replicate a system like this, here is a link to an hands-on tutorial: [Hands-on Tutorial](linkedin.com)
+If you want to replicate a system like this, here is a link to an hands-on tutorial: [Hands-on Tutorial](https://www.linkedin.com/pulse/hand-on-tutorial4-retrieve-data-from-smartphone-using-nicol%25C3%25B3-palmiero)
 
-If you want to see the functioning of the system here is a short video demonstration: [Video Demonstartion](youtube.com)
+If you want to see the functioning of the system here is a short video demonstration: [Video Demonstartion](https://youtu.be/X-OUF5i7VeI)
